@@ -20,6 +20,7 @@ public class ProducerApp {
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, CustomStringKeyPartitioner.class.getName());
 
         try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
             Future<RecordMetadata> responseFuture = producer.send(new ProducerRecord<>(
