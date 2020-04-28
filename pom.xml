@@ -12,6 +12,7 @@
     <modules>
         <module>basic</module>
         <module>streams</module>
+        <module>spring</module>
     </modules>
 
     <properties>

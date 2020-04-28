@@ -1,5 +1,7 @@
 # Project exclude paths
 /basic/target/
+/streams/target/
+/spring/target/
 /target/
 /.idea/
 *.iml
